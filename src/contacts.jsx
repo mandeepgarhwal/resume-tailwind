@@ -22,7 +22,7 @@ export function Contacts() {
     return (
         <>
             <div className='bg-red-200 pt-36 px-36' style={{ minHeight: "100vh" }}>
-                <div className='h-full'>
+                <div className='h-fit'>
                     <Disclosure>
                         {({ open }) => (
 
@@ -33,16 +33,16 @@ export function Contacts() {
                                         Glimpses from past.
                                     </Disclosure.Button>
                                 </div>
-                                <Disclosure.Panel className="text-gray-500 h-full">
+                                <Disclosure.Panel className="text-gray-500 h-fit">
 
                                 <div >
                                     <Carousel slideInterval={3000} className='h-96 w-full'>
-                                        <img src={plogo} style={{marginLeft: "30%"}} className = "h-full w-2/5" alt="..." />
-                                        <img src={ilogo}  style={{marginLeft: "25%"}} className = "h-full w-3/6" alt="..." />
-                                        <img src={blogo}  style={{marginLeft: "20%"}} className = "h-full w-7/12" alt="..." />
+                                        <img src={plogo}  className = "h-full w-2/5" alt="..." />
+                                        <img src={ilogo}  className = "h-full w-3/6" alt="..." />
+                                        <img src={blogo}  className = "h-full w-7/12" alt="..." />
                                         <img src={rhlogo}  className = "h-full " alt="..." />
-                                        <img src={vdlogo}  style={{marginLeft: "30%"}} className = "h-full w-2/5" alt="..." />
-                                        <img src={rmlogo} style={{marginLeft: "20%"}} className = "h-full w-7/12" alt="..." />
+                                        <img src={vdlogo}  className = "h-full w-2/5" alt="..." />
+                                        <img src={rmlogo}  className = "h-full w-7/12" alt="..." />
                                     </Carousel>
                                 </div>
                                     

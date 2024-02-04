@@ -1,8 +1,8 @@
-
+import { Table } from 'flowbite-react';
 
 function App() {
   return (
-    <div className="bg-red-200 mt-3">
+    <div className="bg-red-200">
       <h1 className=" text-4xl text-fuchsia-950 text-center mb-8">Introduction</h1>
       
       <h2 className="bg-red-600 text-right text-2xl font-serif text-slate-700 mb-4 mx-8 rounded-3xl pr-8"> OBJECTIVE</h2>
@@ -30,14 +30,81 @@ function App() {
       </div>
       <h2 className="bg-red-600 text-right text-2xl font-serif text-slate-700 mb-4 mx-8 rounded-3xl pr-8"> EDUCATIONAL QUALIFICATION </h2>
       <div className="px-12">
-      <table className= "table"  >
+      <div className="overflow-x-auto">
+      <Table>
+        <Table.Head>
+          <Table.HeadCell className='bg-red-200'>Year</Table.HeadCell>
+          <Table.HeadCell className='bg-red-200' >Degree</Table.HeadCell>
+          <Table.HeadCell className='bg-red-200' >Institution</Table.HeadCell>
+          <Table.HeadCell className='bg-red-200' >Board/University</Table.HeadCell>
+          <Table.HeadCell className='bg-red-200' >Percentage</Table.HeadCell>
+
+        </Table.Head>
+        <Table.Body className="divide-y">
+          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+            <Table.Cell className="bg-red-200 whitespace-nowrap text-xl font-serif text-slate-900 dark:text-white">
+              {"2018"}
+            </Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >UGC-NET (Pol. Sc.)</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >UGC</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >UGC</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >59%</Table.Cell>
+
+          </Table.Row>
+          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+            <Table.Cell className="bg-red-200 whitespace-nowrap text-xl font-serif text-slate-900 dark:text-white">
+              2018
+            </Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >M.A.(Pol. Sc.)</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >Distance Eduction</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >Kurukshetra University</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >55%</Table.Cell>
+
+          </Table.Row>
+          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+            <Table.Cell className="bg-red-200 whitespace-nowrap text-xl font-serif text-slate-900 dark:text-white">2011</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >M.Sc. (Phy)</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >Bundelkhand University</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >Bundelkhand University</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >70%</Table.Cell>
+
+          </Table.Row>
+          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+            <Table.Cell className="bg-red-200 whitespace-nowrap text-xl font-serif text-slate-900 dark:text-white">2009</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >B.E. (ECE)</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >UIET</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >Punjab University</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >61%</Table.Cell>
+
+          </Table.Row>
+          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+            <Table.Cell className= "bg-red-200 whitespace-nowrap text-xl font-serif text-slate-900 dark:text-white">2003</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >AISSCE</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >Vishvas senior secondary school, Hisar</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >CBSE</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >67%</Table.Cell>
+
+          </Table.Row>
+          <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+            <Table.Cell className= "bg-red-200 whitespace-nowrap text-xl font-serif text-slate-900 dark:text-white">2001</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >AISSE</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >Vishvas senior secondary school, Hisar</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >CBSE</Table.Cell>
+            <Table.Cell className='bg-red-200 text-xl font-serif text-slate-900' >54%</Table.Cell>
+
+          </Table.Row>
+        </Table.Body>
+      </Table>
+    </div>
+      {/* <table className= "table" style={{width: "100%"}} >
         <thead>
           <tr >
             <th scope= "col" style={{backgroundColor: 'rgb(254 202 202)'}}>Year</th>
             <th scope= "col" style={{backgroundColor: 'rgb(254 202 202)'}}>Degree</th>
             <th scope= "col" style={{backgroundColor: 'rgb(254 202 202)'}}>Institution</th>
-            <th scope= "col" style={{backgroundColor: 'rgb(254 202 202)'}}>Percentage</th>
             <th scope= "col" style={{backgroundColor: 'rgb(254 202 202)'}}>Board/University</th>
+            <th scope= "col" style={{backgroundColor: 'rgb(254 202 202)'}}>Percentage</th>
+            
           </tr>
         </thead>
         <tbody>
@@ -84,7 +151,7 @@ function App() {
             <td style={{backgroundColor: 'rgb(254 202 202)'}}>54 %</td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
       </div>
       <h2 className="bg-red-600 text-right text-2xl font-serif text-slate-700 mb-4 mx-8 rounded-3xl pr-8"> SUMMER INTERNSHIP AND PROFESSIONAL COURSES</h2>
       <div>

@@ -3,17 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './navbar';
+
 import Projects from './projects';
 import Technologies from './technologies';
 import { Contacts } from './contacts';
-
+import { ThemeProvider } from "@material-tailwind/react";
+import Navbars from './navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+  <ThemeProvider>
   <BrowserRouter>
-    <Navbar/>
+    <Navbars/>
     <Routes>
       <Route path="/" element={<App />}></Route>
       <Route path="/projects" element={<Projects />}></Route>
@@ -22,6 +24,7 @@ root.render(
 
     </Routes>
     </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );
 
