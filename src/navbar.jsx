@@ -8,21 +8,21 @@ export default function Navbars() {
             <div  className=" mt-2 self-start">
             <Navbar.Brand href="/" >
                 <img src= {thumbnail} className="mr-3  rounded-full  w-6 h-6 sm:h-9 sm:w-9 " alt="Flowbite React Logo" />
-                <span className=" self-start whitespace-nowrap text-xl font-semibold dark:text-white">Mandeep Garhwal</span>
+                <span className=" self-start whitespace-nowrap text-base sm:text-xl font-semibold dark:text-white">Mandeep Garhwal</span>
             </Navbar.Brand>
             </div >
-            <div className="flex flex-col justify-start">
+            <div className="flex flex-col justify-start w-fit">
             <div className="flex flex-row justify-end">
             <Navbar.Toggle className='focus:w-1/5 mr-3 focus:ring-red-200 hover:bg-red-200'/>
             </div>
             {/* <div className="flex flex-col justify-start pb-6"> */}
             <Navbar.Collapse className=''>
                 
-                <Navbar.Link href="/projects" className='text-xl -mt-5'>
+                <Navbar.Link href="/projects" className='text-sm sm:text-xl md:-mt-5'>
                     Projects
                 </Navbar.Link>
-                <Navbar.Link href="/technologies" className='text-xl -mt-5'>Technologies</Navbar.Link>
-                <Navbar.Link href="/contacts" className='text-xl -mt-5'>Personal Information</Navbar.Link>
+                <Navbar.Link href="/technologies" className='text-base sm:text-xl md:-mt-5'>Technologies</Navbar.Link>
+                <Navbar.Link href="/contacts" className='text-base sm:text-xl md:-mt-5'>Personal Information</Navbar.Link>
                 
             </Navbar.Collapse>
             {/* </div> */}
