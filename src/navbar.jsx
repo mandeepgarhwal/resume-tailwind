@@ -4,23 +4,23 @@ import { Navbar } from 'flowbite-react';
 export default function Navbars() {
     return (
 
-        <Navbar fluid rounded className='bg-red-200'>
-            <Navbar.Brand href="/">
+        <Navbar fluid rounded className='bg-red-200 align-top'>
+            <div  className=" mt-2 self-start">
+            <Navbar.Brand href="/" >
                 <img src= {thumbnail} className="mr-3  rounded-full  w-6 h-6 sm:h-9 sm:w-9 " alt="Flowbite React Logo" />
-                <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Mandeep Garhwal</span>
+                <span className=" self-start whitespace-nowrap text-xl font-semibold dark:text-white">Mandeep Garhwal</span>
             </Navbar.Brand>
-           
-            <div className="flex md:order-2 justify-end">
-            <Navbar.Toggle />
+            </div >
+            <div className="flex flex-col justify-end">
+            <div className="flex flex-row justify-end">
+            <Navbar.Toggle className='focus:w-1/5 mr-3 focus:ring-red-200 hover:bg-red-200'/>
             </div>
-       
-            <div>
             <Navbar.Collapse>
-                <Navbar.Link href="/projects">
+                <Navbar.Link href="/projects" className='text-xl'>
                     Projects
                 </Navbar.Link>
-                <Navbar.Link href="/technologies">Technologies</Navbar.Link>
-                <Navbar.Link href="/contacts">Personal Information</Navbar.Link>
+                <Navbar.Link href="/technologies" className='text-xl'>Technologies</Navbar.Link>
+                <Navbar.Link href="/contacts" className='text-xl'>Personal Information</Navbar.Link>
 
             </Navbar.Collapse>
             </div>
