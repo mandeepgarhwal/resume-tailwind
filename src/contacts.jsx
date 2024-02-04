@@ -36,13 +36,13 @@ export function Contacts() {
                                 <Disclosure.Panel className="text-gray-500 h-full">
 
                                 <div >
-                                    <Carousel slideInterval={3000} style={{height: "800px"}}>
-                                        <img src={plogo} style = {{maxHeight: "800px"}} alt="..." />
-                                        <img src={ilogo} style = {{maxHeight: "800px"}} alt="..." />
-                                        <img src={blogo} style = {{maxHeight: "800px"}} alt="..." />
-                                        <img src={rhlogo} style = {{maxHeight: "800px"}} alt="..." />
-                                        <img src={vdlogo} style = {{maxHeight: "800px"}} alt="..." />
-                                        <img src={rmlogo} style = {{maxHeight: "800px"}} alt="..." />
+                                    <Carousel slideInterval={3000} className='h-96 w-full'>
+                                        <img src={plogo} style={{marginLeft: "30%"}} className = "h-full w-2/5" alt="..." />
+                                        <img src={ilogo}  style={{marginLeft: "25%"}} className = "h-full w-3/6" alt="..." />
+                                        <img src={blogo}  style={{marginLeft: "20%"}} className = "h-full w-7/12" alt="..." />
+                                        <img src={rhlogo}  className = "h-full " alt="..." />
+                                        <img src={vdlogo}  style={{marginLeft: "30%"}} className = "h-full w-2/5" alt="..." />
+                                        <img src={rmlogo} style={{marginLeft: "20%"}} className = "h-full w-7/12" alt="..." />
                                     </Carousel>
                                 </div>
                                     
