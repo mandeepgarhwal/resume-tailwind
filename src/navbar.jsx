@@ -11,18 +11,21 @@ export default function Navbars() {
                 <span className=" self-start whitespace-nowrap text-xl font-semibold dark:text-white">Mandeep Garhwal</span>
             </Navbar.Brand>
             </div >
-            <div className="flex flex-col justify-end">
+            <div className="flex flex-col justify-start">
             <div className="flex flex-row justify-end">
             <Navbar.Toggle className='focus:w-1/5 mr-3 focus:ring-red-200 hover:bg-red-200'/>
             </div>
-            <Navbar.Collapse>
-                <Navbar.Link href="/projects" className='text-xl'>
+            {/* <div className="flex flex-col justify-start pb-6"> */}
+            <Navbar.Collapse className=''>
+                
+                <Navbar.Link href="/projects" className='text-xl -mt-5'>
                     Projects
                 </Navbar.Link>
-                <Navbar.Link href="/technologies" className='text-xl'>Technologies</Navbar.Link>
-                <Navbar.Link href="/contacts" className='text-xl'>Personal Information</Navbar.Link>
-
+                <Navbar.Link href="/technologies" className='text-xl -mt-5'>Technologies</Navbar.Link>
+                <Navbar.Link href="/contacts" className='text-xl -mt-5'>Personal Information</Navbar.Link>
+                
             </Navbar.Collapse>
+            {/* </div> */}
             </div>
         </Navbar>
         // <nav className="bg-red-200 dark:bg-gray-900 fixed w-full z-20 top-0 start-0  border-b border-gray-200 dark:border-gray-600">
