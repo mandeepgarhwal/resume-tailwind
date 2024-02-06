@@ -165,7 +165,7 @@ export default function Projects() {
             </div>
           </MDBCol>
         </MDBRow>
-        <MDBRow center className='my-5'>
+        <MDBRow center className='mt-5'>
           <MDBCol size={5}>
             <div>
               <MDBCard style={{ maxWidth: '540px' }}>
