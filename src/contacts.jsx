@@ -36,7 +36,7 @@ export function Contacts() {
                                 <Disclosure.Panel className="text-gray-500 h-fit">
 
                                 <div >
-                                    <Carousel slideInterval={3000} className='h-52 sm:h-64 md:h-96 w-full'>
+                                    <Carousel slideInterval={3000} className='h-48 sm:h-64 md:h-96 w-full'>
                                         <img src={plogo}  className = "h-full w-2/5" alt="..." />
                                         <img src={ilogo}  className = "h-full w-3/6" alt="..." />
                                         <img src={blogo}  className = "h-full w-7/12" alt="..." />
@@ -113,7 +113,7 @@ export function Contacts() {
                                 >
 
                                     <Disclosure.Panel>
-                                        <pre className="text-left text-base sm:text-xl font-serif text-slate-900 mb-4 pl-10">
+                                        <pre className="text-left text-sm sm:text-xl font-serif text-slate-900 mb-4 pl-10">
                                             MANDEEP GARHWAL <br />
                                             H. NO. 265, SEC 13, HISAR <br />
                                             Haryana, pin code - 125005<br />
@@ -143,10 +143,10 @@ export function Contacts() {
                                     </Popover.Button>
                                 </div>
                                 <Popover.Panel >
-                                    <div className=" bg-red-200 w-96 pl-4 border-3 border-pink-900 sm:ml-20 mt-6 rounded-xl" style={{ display: "flex", flexDirection: "column" }}>
+                                    <div className=" bg-red-200 w-80 sm:w-96 pl-4 border-3 border-pink-900 sm:ml-20 mt-6 rounded-xl" style={{ display: "flex", flexDirection: "column" }}>
                                         <input className="bg-red-200 rounded-2xl w-64 mt-6 pl-2" type="text" name="" placeholder='Please Enter Your Name' id="" />
                                         <input className="bg-red-200 rounded-2xl w-64 mt-6 pl-2" type="email" name="" placeholder='Please Enter Your Email' id="" />
-                                        <textarea className="bg-red-200 rounded-2xl  mt-6 pl-2" name="query" id="" placeholder='Please Enter Your Query' cols="18" rows="4"></textarea>
+                                        <textarea className="bg-red-200 rounded-2xl  mt-6 pl-2" name="query" id="" placeholder='Please Enter Your Query' cols=" 14 sm:18" rows="4"></textarea>
                                         <div style={{ display: "flex", flexDirection: "row" }}>
                                             <button className='rounded-full btn btn-danger ml-10 pb-2 my-3'>Send</button>
                                             <button className='rounded-full btn btn-primary ml-10 pb-2 my-3 '>Cancel</button>
