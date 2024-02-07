@@ -21,22 +21,22 @@ export function Contacts() {
 
     return (
         <>
-            <div className='bg-red-200 pt-36 px-36' style={{ minHeight: "100vh" }}>
+            <div className='bg-red-200 pt-36 pl-5 lg:px-36' style={{ minHeight: "100vh" }}>
                 <div className='h-fit'>
                     <Disclosure>
                         {({ open }) => (
 
                             <>
-                                <div className='flex flex-row'>
-                                    <ChevronRightIcon className={open ? 'rotate-90 transform h-14' : 'h-14'} />
-                                    <Disclosure.Button className="py-2 text-4xl ">
-                                        Glimpses from past.
+                                <div style={{minWidth: "220px"}} className='flex flex-row'>
+                                    <ChevronRightIcon className={open ? 'rotate-90 transform h-8 sm:h-10 md:h-14' : 'h-8 sm:h-10 md:h-14'} />
+                                    <Disclosure.Button style={{minWidth: "180px"}} className=" pb-1 sm:py-2 text-lg sm:text-2xl md:text-4xl flex flex-shrink">
+                                        Glimpses from past
                                     </Disclosure.Button>
                                 </div>
                                 <Disclosure.Panel className="text-gray-500 h-fit">
 
                                 <div >
-                                    <Carousel slideInterval={3000} className='h-96 w-full'>
+                                    <Carousel slideInterval={3000} className='h-52 sm:h-64 md:h-96 w-full'>
                                         <img src={plogo}  className = "h-full w-2/5" alt="..." />
                                         <img src={ilogo}  className = "h-full w-3/6" alt="..." />
                                         <img src={blogo}  className = "h-full w-7/12" alt="..." />
@@ -56,10 +56,10 @@ export function Contacts() {
                         {({ open }) => (
 
                             <>
-                                <div className='flex flex-row'>
-                                    <ChevronRightIcon className={open ? 'rotate-90 transform h-14' : 'h-14'} />
-                                    <Disclosure.Button className="py-2 text-4xl ">
-                                        Social media Accounts.
+                                <div style={{minWidth: "220px"}} className='flex flex-row'>
+                                    <ChevronRightIcon className={open ? 'rotate-90 transform h-8 sm:h-10 md:h-14' : 'h-8 sm:h-10 md:h-14'} />
+                                    <Disclosure.Button style={{minWidth: "180px"}} className="pb-1 sm:py-2 text-lg sm:text-2xl md:text-4xl flex flex-shrink">
+                                        Social media Accounts
                                     </Disclosure.Button>
                                 </div>
                                 <Transition
@@ -73,16 +73,16 @@ export function Contacts() {
 
                                     <Disclosure.Panel>
                                         <a href="https://www.facebook.com/mandeepgarhwal" className="flex items-center space-x-3 rtl:space-x-reverse ml-12 mt-6">
-                                            <img src={fblogo} className="h-10 rounded-full w-10" alt="my pic" />
-                                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Mandeep Garhwal</span>
+                                            <img src={fblogo} className="h-7 sm:h-10 rounded-full w-7 sm:w-10" alt="my pic" />
+                                            <span className="self-center text-lg sm:text-2xl font-semibold whitespace-nowrap dark:text-white">Mandeep Garhwal</span>
                                         </a>
                                         <a href="https://www.instagram.com/garhwalmandeep/" className="flex items-center space-x-3 rtl:space-x-reverse ml-12 mt-6">
-                                            <img src={instalogo} className="h-10 rounded-full w-10" alt="my pic" />
-                                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">garhwalmandeep</span>
+                                            <img src={instalogo} className="h-7 sm:h-10 rounded-full w-7 sm:w-10" alt="my pic" />
+                                            <span className="self-center text-lg sm:text-2xl font-semibold whitespace-nowrap dark:text-white">garhwalmandeep</span>
                                         </a>
                                         <a href="https://twitter.com/mandeep_ga89285" className="flex items-center space-x-3 rtl:space-x-reverse ml-12 mt-6">
-                                            <img src={xlogo} className="h-10 rounded-full w-10" alt="my pic" />
-                                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">@mandeep_ga89285</span>
+                                            <img src={xlogo} className="h-7 sm:h-10 rounded-full w-7 sm:w-10" alt="my pic" />
+                                            <span className="self-center text-lg sm:text-2xl font-semibold whitespace-nowrap dark:text-white">@mandeep_ga89285</span>
                                         </a>
 
                                     </Disclosure.Panel>
@@ -98,8 +98,8 @@ export function Contacts() {
 
                             <>
                                 <div className='flex flex-row'>
-                                    <ChevronRightIcon className={open ? 'rotate-90 transform h-14' : 'h-14'} />
-                                    <Disclosure.Button className="py-2 text-4xl ">
+                                    <ChevronRightIcon className={open ? 'rotate-90 transform h-8 sm:h-10 md:h-14' : 'h-8 sm:h-10 md:h-14'} />
+                                    <Disclosure.Button className="pb-1 sm:py-2 text-lg sm:text-2xl md:text-4xl flex flex-shrink">
                                         Find me
                                     </Disclosure.Button>
                                 </div>
@@ -113,7 +113,7 @@ export function Contacts() {
                                 >
 
                                     <Disclosure.Panel>
-                                        <pre className="text-left text-xl font-serif text-slate-900 mb-4 pl-10">
+                                        <pre className="text-left text-base sm:text-xl font-serif text-slate-900 mb-4 pl-10">
                                             MANDEEP GARHWAL <br />
                                             H. NO. 265, SEC 13, HISAR <br />
                                             Haryana, pin code - 125005<br />
@@ -143,7 +143,7 @@ export function Contacts() {
                                     </Popover.Button>
                                 </div>
                                 <Popover.Panel >
-                                    <div className=" bg-red-200 w-96 pl-4 border-3 border-pink-900 ml-20 mt-6 rounded-xl" style={{ display: "flex", flexDirection: "column" }}>
+                                    <div className=" bg-red-200 w-96 pl-4 border-3 border-pink-900 sm:ml-20 mt-6 rounded-xl" style={{ display: "flex", flexDirection: "column" }}>
                                         <input className="bg-red-200 rounded-2xl w-64 mt-6 pl-2" type="text" name="" placeholder='Please Enter Your Name' id="" />
                                         <input className="bg-red-200 rounded-2xl w-64 mt-6 pl-2" type="email" name="" placeholder='Please Enter Your Email' id="" />
                                         <textarea className="bg-red-200 rounded-2xl  mt-6 pl-2" name="query" id="" placeholder='Please Enter Your Query' cols="18" rows="4"></textarea>
