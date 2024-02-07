@@ -16,8 +16,19 @@ import dazzle from "./dazzle.png"
 import mmi from "./mmi.jpg"
 import phd from "./india-china.jpeg"
 import cine from "./cinema.jpg"
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from 'react'
 
 export default function Projects() {
+  useEffect(() => {
+    toast("Entering danger zone!", {
+      position: "top-center"
+    });
+  
+
+  }, [ ])
+  
   return (
     <div className='bg-red-200 pt-5 sm:pl-10'>
       <MDBContainer fluid  className=' -ml-4  sm:mx-0'>

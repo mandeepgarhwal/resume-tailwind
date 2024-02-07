@@ -12,11 +12,58 @@ import vdlogo from "./vigyan dhara.jpg"
 import rmlogo from "./rps.jpeg"
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Carousel } from 'flowbite-react';
-
+import Swal from 'sweetalert2'
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 // import { useState } from 'react'
 // import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
+import { useEffect } from 'react'
 export function Contacts() {
+    useEffect(() => {
+      
+        toast('Entering danger zone', {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+
+            });
+
+    }, [ ])
+    
+
+    function sendnote(){
+        Swal.fire({
+            title: "Good job!",
+            text: "You Sent your queries!",
+            icon: "success",
+            showCloseButton: true
+        })
+        document.getElementById("name").value = ""
+        document.getElementById("email").value = ""
+        document.getElementById("query").value = ""
+    }
+    function cancelquery(){
+        Swal.fire({
+            title: "Are you sure!",
+            text: "This will clear all the fields!",
+            icon: "warning",
+            showCancelButton: true,
+            cancelButtonText: "cancel",
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result)=> {
+            if (result.isConfirmed){
+                document.getElementById("name").value = ""
+                document.getElementById("email").value = ""
+                document.getElementById("query").value = ""
+            }
+        })}
 
 
     return (
@@ -72,7 +119,7 @@ export function Contacts() {
                                 >
 
                                     <Disclosure.Panel>
-                                        <a href="https://www.facebook.com/mandeepgarhwal" className="flex items-center space-x-3 rtl:space-x-reverse ml-12 mt-6">
+                                        <a href="https://www.facebook.com/mandeepgarhwal" className="flex items-center space-x-3 rtl:space-x-reverse ml-12 mt-6" target="_blank" >
                                             <img src={fblogo} className="h-7 sm:h-10 rounded-full w-7 sm:w-10" alt="my pic" />
                                             <span className="self-center text-lg sm:text-2xl font-semibold whitespace-nowrap dark:text-white">Mandeep Garhwal</span>
                                         </a>
@@ -144,12 +191,12 @@ export function Contacts() {
                                 </div>
                                 <Popover.Panel >
                                     <div className=" bg-red-200 w-80 sm:w-96 pl-4 border-3 border-pink-900 sm:ml-20 mt-6 rounded-xl" style={{ display: "flex", flexDirection: "column" }}>
-                                        <input className="bg-red-200 rounded-2xl w-64 mt-6 pl-2" type="text" name="" placeholder='Please Enter Your Name' id="" />
-                                        <input className="bg-red-200 rounded-2xl w-64 mt-6 pl-2" type="email" name="" placeholder='Please Enter Your Email' id="" />
-                                        <textarea className="bg-red-200 rounded-2xl  mt-6 pl-2" name="query" id="" placeholder='Please Enter Your Query' cols=" 14 sm:18" rows="4"></textarea>
+                                        <input className="bg-red-200 rounded-2xl w-64 mt-6 pl-2" type="text" name="" placeholder='Please Enter Your Name' id="name" />
+                                        <input className="bg-red-200 rounded-2xl w-64 mt-6 pl-2" type="email" name="" placeholder='Please Enter Your Email' id="email" />
+                                        <textarea className="bg-red-200 rounded-2xl  mt-6 pl-2" name="query" id="query" placeholder='Please Enter Your Query' cols=" 14 sm:18" rows="4"></textarea>
                                         <div style={{ display: "flex", flexDirection: "row" }}>
-                                            <button className='rounded-full btn btn-danger ml-10 pb-2 my-3'>Send</button>
-                                            <button className='rounded-full btn btn-primary ml-10 pb-2 my-3 '>Cancel</button>
+                                            <button className='rounded-full btn btn-danger ml-10 pb-2 my-3' onClick={sendnote}>Send</button>
+                                            <button className='rounded-full btn btn-primary ml-10 pb-2 my-3' onClick={cancelquery} >Cancel</button>
                                         </div>
                                     </div>
                                 </Popover.Panel>
@@ -157,8 +204,10 @@ export function Contacts() {
                         )}
                     </Popover>
                 </div>
-            </div>
 
+                <ToastContainer/>
+            </div>
+            
         </>
 
     )
