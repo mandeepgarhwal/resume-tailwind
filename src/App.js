@@ -29,7 +29,7 @@ function App() {
         </ul>
       </div>
       <h2 className="bg-red-600 text-right text-2xl font-serif text-slate-700 mb-4 mx-8 rounded-3xl pr-8"> EDUCATIONAL QUALIFICATION </h2>
-      <div className="px-12">
+      <div className="md:px-12">
       <div className="overflow-x-auto">
       <Table>
         <Table.Head>
